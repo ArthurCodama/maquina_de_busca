@@ -7,6 +7,7 @@ using std::map;
 
 int Documento::num = 0;
 
+//Não Utilizar
 Documento::Documento(){
     this->nome = "";
 }

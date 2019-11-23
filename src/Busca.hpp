@@ -28,7 +28,7 @@ class Busca{
     vector<Vetor> geraVetores();
 
     //Gera um vetor para representar um documento ou query
-    Vetor geraVetor(const Documento& d, set<string> palavras);
+    Vetor geraVetor(const Documento& d, set<string> palavras) const;
 
     //Importancia da palavra em um documento
     double idf(string palavra) const;
@@ -37,8 +37,9 @@ class Busca{
     Documento getDocQuery(string query) const;
 
     //Calcula a similaridade entre dois documentos utilizando o 'Cosine Ranking'
-    double sim(const Vetor& v1, const Vetor& v2);
-
+    double sim(const Vetor& v1, const Vetor& v2) const;
+    
+  friend class Teste;
 };
 
 #endif

@@ -25,7 +25,6 @@ void Busca::realizaBusca(string query){
 
     for(const Vetor& vetor: vetores){
         double sim = this->sim(vetor, vetorQuery);
-        std::cout << sim << std::endl;
         simDocXQuery[sim].push_back(vetor.getDocumento());
     }
 
@@ -44,7 +43,7 @@ vector<Vetor> Busca::geraVetores(){
     return vetores;
 }
 
-Vetor Busca::geraVetor(const Documento& d, set<string> palavras){
+Vetor Busca::geraVetor(const Documento& d, set<string> palavras) const{
     Vetor v = Vetor(d);
 
     for(string s: palavras){
@@ -69,7 +68,7 @@ Documento Busca::getDocQuery(string query) const{
     return Documento("", mapa);
 }
 
-double Busca::sim(const Vetor& v1, const Vetor& v2){
+double Busca::sim(const Vetor& v1, const Vetor& v2) const{
     double numerador;
     double denominador1, denominador2;
 

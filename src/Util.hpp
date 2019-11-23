@@ -29,6 +29,8 @@ class Util{
 
         //Imprime os documentos ordenados da busca
         static void imprimeDocumentos(const map<double, vector<Documento>, std::greater<double>>& docs);
+
+    friend class Teste;
 };
 
 #endif

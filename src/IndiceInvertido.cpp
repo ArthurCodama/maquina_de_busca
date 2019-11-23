@@ -14,7 +14,7 @@ IndiceInvertido::IndiceInvertido(){
     
 }
 
-IndiceInvertido::IndiceInvertido(const vector<Documento>& documentos){
+IndiceInvertido::IndiceInvertido(const vector<Documento> documentos){
     for(Documento documento : documentos) {
         for(string palavra : documento.getPalavras()) {
             indice[palavra].push_back(documento);

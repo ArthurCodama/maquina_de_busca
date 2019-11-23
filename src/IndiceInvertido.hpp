@@ -14,9 +14,10 @@ using std::vector;
 
 class IndiceInvertido{
   public:
+    //Não utilizar
     IndiceInvertido();
 
-    IndiceInvertido(const vector<Documento>& documentos);
+    IndiceInvertido(const vector<Documento> documentos);
 
     set<string> getPalavras();
 
@@ -33,6 +34,7 @@ class IndiceInvertido{
     map<string, vector<Documento>> indice;
     vector<Documento> documentos;
     int numDocumentos;
+  friend class Teste;
 };
 
 #endif

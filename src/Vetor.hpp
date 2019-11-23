@@ -27,6 +27,7 @@ class Vetor{
     vector<double> vetor;
     Documento documento;
 
+  friend class Teste;
 };
 
 #endif
