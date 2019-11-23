@@ -26,7 +26,12 @@ int main() {
     Util::adicionaDocumento(docs);
     break;
   case '2':
-    Util::buscar(docs);
+    if(docs.size() > 0){
+      Util::buscar(docs);
+    } else{
+      cout << "Operacao bloqueada! Deve ser adicionado um arquivo antes de realizar a pesquisa"
+    }
+    
     break;
   case '0':
     return 0;

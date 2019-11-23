@@ -33,12 +33,15 @@ class Documento{
 
   private:
     static int num;
-    int __id;
-    string nome;
-    int numPalavras;
 
+    int __id;
+
+    string nome;
+
+    int numPalavras;
     //Mapa com a key igual a palavra e o conteudo igual a quantidade de vezes que essa palavra aparece no texto
     map<string, int> palavras;
+
   friend class Teste;
 };
 

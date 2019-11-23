@@ -18,7 +18,7 @@ class Util{
         //Retorna o mapa de palavras relacionado ao numero de vezes que ela aparece em um texto formatado
         static map<string, int> getPalavrasFromTexto(string texto);
         
-        //Cria um documento a partir de um arquivo
+        //Adiciona um documento ao vetor
         static void adicionaDocumento(vector<Documento>& docs);
 
         //Realiza uma busca
